@@ -11,7 +11,7 @@ enum state {IDLE, RUNNING, JUMPUP, JUMPDOWN, HURT}
 var anim_state = state.IDLE
 
 @onready var animator = $AnimatedSprite2D
-@onready var animator_player = $AnimationPlayer
+@onready var animation_player = $AnimationPlayer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -43,7 +43,7 @@ func update_animation(direction):
 		state.JUMPUP:
 			animation_player.play("jump_up")
 		state.JUMPDOWN:
-			aniamtion_player.play("jump_down")
+			animation_player.play("jump_down")
 		state.HURT:
 			animation_player.play("hurt")
 

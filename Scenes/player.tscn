@@ -1039,7 +1039,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jp1p1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onu33"]
+size = Vector2(39, 40)
 
 [sub_resource type="Animation" id="Animation_vl3ue"]
 length = 24.4
@@ -1191,17 +1192,15 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_5dxoq")
-speed = null
-jump_velocity = null
-acceleration = null
-jumps = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -42)
 sprite_frames = SubResource("SpriteFrames_g5yu2")
-animation = &"hurt"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_jp1p1")
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_onu33")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
