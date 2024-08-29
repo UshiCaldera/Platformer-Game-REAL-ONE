@@ -71,6 +71,7 @@ animations = [{
 
 [node name="Evil Wizard" type="Area2D" groups=["Hurt"]]
 script = ExtResource("1_sabjr")
+flip_time = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rv3ab")
